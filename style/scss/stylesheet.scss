@@ -1,0 +1,130 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+    font-family:'Passion One';
+	font-size: 100%;
+	line-height: 44px;
+	font-size: 16px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:'Passion One';}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none; }
+ul, ol, li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:'Passion One';font-weight: 400;}
+
+
+
+[class*=__conteiner] {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+
+
+
+.products {
+    &_title {
+        text-align: center;
+        font-size: 24px;
+        margin: 5px 0;
+    }
+
+		// .products_create
+
+		&_create {
+		}
+
+		// .products_input
+
+		&_input {
+            border: 1px solid #000000;
+            border-radius: 5px;
+            height: 30px;
+		}
+
+		// .products_input
+
+		&_input {
+		}
+
+		// .products_product
+
+		&_product {
+		}
+
+		// .products_filter
+
+		&_filter {
+		}
+
+		// .products__conteiner
+
+		&__conteiner {
+		}
+}
+.products_list {
+
+		// .products_list__conteiner
+
+		&__conteiner {
+		}
+}
+
+
+.product {
+
+    &_item {
+		display: flex;
+
+    }
+
+	&_item_photo { 
+		flex: 0 1 30%;
+		position: relative; 
+	}
+
+    &_item_photo img{
+		position: absolute;
+    }
+
+    &_item_content {
+    }
+
+    &_item_title {
+    }
+
+    &_item_price {
+    }
+
+    &_item_delete {
+    }
+}
+.popup-link {
+}
+
+
