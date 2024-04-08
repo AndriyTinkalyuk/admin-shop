@@ -1,4 +1,5 @@
 import { productList } from "../main.js";
+import sumOfPrices from "./pricesSum.js";
 
 export const productListDisplay = document.querySelector('.products_list__conteiner');
 export default function renderCards() {
@@ -18,5 +19,6 @@ export default function renderCards() {
             </div>`
         );
     }
+    sumOfPrices()
 
 }
