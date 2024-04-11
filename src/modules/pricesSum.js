@@ -7,9 +7,9 @@ export default function sumOfPrices() {
 if (productList.size > 0) { 
     let sum = 0;
     for (let value of productList.values() ) { 
-        sum += parseInt(value.price)
+        sum += parseInt(value.price);
     }
-    pricesSum.textContent = sum;
+    pricesSum.textContent = `${sum} грн`;
 }
 }
 

@@ -12,8 +12,8 @@ export default function renderCards() {
                     <img src="images/${detail.image}">
                 </div>
                 <div class="product_item_content">
-                    <div class="product_item_title popup-link">${name}</div>
-                    <div class="product_item_price popup-link">${detail.price}</div>
+                    <div class="product_item_title popup-link">Назва: ${name}</div>
+                    <div class="product_item_price popup-link">Ціна: ${detail.price} грн</div>
                     <button class="product_item_delete">Delete</button>
                 </div>
             </div>`

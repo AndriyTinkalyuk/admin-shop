@@ -2,7 +2,6 @@ import { productList } from "../main.js";
 import renderCards from "./renderCards.js";
 
 export  default function popup(event) {
-    const popup = document.querySelector('.popup')
     const parentElement = event.target.closest(".product_item");
     const productName = parentElement.getAttribute('data-name');
     
@@ -35,6 +34,7 @@ function newName(productName) {
 
  productList.delete(productName);
  renderCards();
+ togglePopup()
 }
 
 function newPrice(productName) { 
@@ -44,4 +44,11 @@ function newPrice(productName) {
     const product = productList.get(productName);
     product.price = newValue;
     renderCards();
+    togglePopup()
+}
+
+
+function togglePopup() { 
+    const popup = document.querySelector('.popup')
+    popup.classList.toggle('open');
 }

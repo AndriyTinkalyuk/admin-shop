@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="style/css/stylesheet.css">
 </head>
 <body>
@@ -12,21 +12,22 @@
                 <div class="products__conteiner">
                     <div class="products_title">Додати продукт</div>
                     <div class="products_create">
-                    <div class="products_input_title">Назва: <input type="text" id="input_name" class="products_input" required></div>
-                    <div class="products_input_title">Ціна: <input type="number" id="input_price"  class="products_input" required></div>
+                    <div class="products_input_title">Назва: <input type="text" id="input_name" class="products_input" required placeholder="Введіть назву"></div>
+                    <div class="products_input_title">Ціна: <input type="number" id="input_price"  class="products_input" required  placeholder="Введіть Ціна"></div>
                     <div class="products_input_title">Виберіть зображення: <input type="file" id="imageInput" accept="image/*" required></div>
                     <button class="products_product_button" id="create_product_button">Додати товар</button>
                 </div>
-                <div class="products_filter"> <input type="text" class="product_filter_input"></div>
-                <div class="products_sum">сума (ціна) всіх товарів: <span>0</span></div>
+                <div class="products_filter"> <input type="text" class="product_filter_input"  placeholder="Введіть назву"></div>
+                <div class="products_sum">сума (ціна) всіх товарів: <span>0 грн</span></div>
                 </div>
                 <div class="products_list__conteiner"></div>
         </div>
 
             <div class="popup">
                 <div class="popup_body">
-                    <div class="popup_close"></div>
                     <div class="popup_content">
+                        <div class="popup_close"></div>
+                        <span></span>
                         <input type="text" class="popup_name_input">
                     </div>
                     <div class="popup_button"> <button >Зберегти</button> </div>
