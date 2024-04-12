@@ -6,6 +6,7 @@ export default function deleteProduct(event) {
 
     const parentElement = event.target.closest(".product_item");
     const productName = parentElement.getAttribute('data-name');
-    productList.delete(productName);
-    renderCards();
+    parentElement.classList.add('deleted');
+    setTimeout(() => { productList.delete(productName); renderCards()}, 1000)
+   
 }

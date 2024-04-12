@@ -9,7 +9,7 @@ export default function filter() {
         if (!titleText.includes(productsFilterValue)) {
             element.style.display = 'none';
         } else {
-            element.style.display = 'block';
+            element.style.display = 'flex';
         }
     });
 }
