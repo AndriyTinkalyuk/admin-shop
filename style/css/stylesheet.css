@@ -34,6 +34,12 @@ button {
   border: 1px solid #666666;
 }
 
+button:hover {
+  background-color: rgba(201, 194, 194, 0.8666666667);
+  border: 1px solid #666666;
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -138,7 +144,7 @@ button {
 .product_item_photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -154,6 +160,11 @@ button {
 .product_item_content .product_item_title,
 .product_item_content .product_item_price {
   margin-bottom: 5px;
+  cursor: pointer;
+}
+.product_item_content .product_item_title:hover,
+.product_item_content .product_item_price:hover {
+  color: rgba(0, 0, 0, 0.4156862745);
 }
 .product_item_content .product_item_delete {
   cursor: pointer;
@@ -162,6 +173,22 @@ button {
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
+  margin-top: 5px;
+}
+.product_item_content .product_item_delete:hover {
+  background-color: #de2a2a;
+  color: #e4e3e3;
+}
+
+@media (max-width: 500px) {
+  .product_item {
+    flex-direction: column;
+  }
+  .product_item_photo {
+    flex: 0 1 100%;
+    position: relative;
+    min-height: 400px;
+  }
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
