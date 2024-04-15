@@ -15,3 +15,19 @@ createProductButton.addEventListener('click', createProduct);
 productListDisplay.addEventListener('click', deleteProduct);
 productsFilterInput.addEventListener('input', filter);
 productListDisplay.addEventListener('click', popup);
+
+
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem("products", JSON.stringify(Array.from(productList.entries())));
+});
+
+window.addEventListener('load', () => {
+    const raw = localStorage.getItem("products");
+    const products = JSON.parse(raw);
+    if (products) {
+        products.forEach(([key, value]) => {
+            productList.set(key, value);
+        });
+        renderCards();
+    }
+});
