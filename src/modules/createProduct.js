@@ -1,9 +1,10 @@
-import { productList } from "../main.js";
 import renderCards from "./renderCards.js";
 
-export default function createProduct() {
-    const productName = document.getElementById('input_name').value;
-    const productPrice = document.getElementById('input_price').value;
+export default function createProduct(array) {
+    const productNameInput = document.getElementById('input_name');
+    const productName =productNameInput.value;
+    const productPriceInput = document.getElementById('input_price');
+    const productPrice = productPriceInput.value;
     const productImg = document.getElementById('imageInput').files[0];
 
     if (!productImg) {
@@ -17,14 +18,17 @@ export default function createProduct() {
     }
 
 
-    const ProductDetail = { price: productPrice, image: productImg.name };
-    productList.set(productName, ProductDetail);
-    console.log(productList);
+    const ProductDetail = { price: productPrice, image: URL.createObjectURL(productImg.name) };
+    array.set(productName, ProductDetail);
+
     renderCards();
     const productItem = document.querySelector('.product_item');
     if (productItem) {
     productItem.classList.add('new');
 }
+
+productNameInput.value = "";
+productPriceInput.value = "";
 }
 
 

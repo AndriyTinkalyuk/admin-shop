@@ -1,15 +1,14 @@
-import {productList} from '../main.js'
 
 const pricesSum = document.querySelector('.products_sum span')
 
 
-export default function sumOfPrices() {
-if (productList.size > 0) { 
+export default function sumOfPrices(array) {
     let sum = 0;
-    for (let value of productList.values() ) { 
+if (array.size > 0) { 
+    for (let value of array.values() ) { 
         sum += parseInt(value.price);
     }
-    pricesSum.textContent = `${sum} грн`;
-}
+} 
+pricesSum.textContent = `${sum} грн`;
 }
 

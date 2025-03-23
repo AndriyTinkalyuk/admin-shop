@@ -11,8 +11,8 @@ const productsFilterInput= document.querySelector('.product_filter_input')
 const createProductButton = document.getElementById('create_product_button');
 
 
-createProductButton.addEventListener('click', createProduct);
-productListDisplay.addEventListener('click', deleteProduct);
+createProductButton.addEventListener('click', () => createProduct(productList));
+productListDisplay.addEventListener('click',(event) => deleteProduct(productList, event));
 productsFilterInput.addEventListener('input', filter);
 productListDisplay.addEventListener('click', popup);
 

@@ -12,7 +12,8 @@ export  default function popup(event) {
 
     if (event.target.classList.contains('product_item_price')) {
         popupButton.onclick = () => newPrice(productName);
-        prevValue.textContent = `${productName.price} грн`;
+        const product = productList.get(productName);
+        prevValue.textContent = `${product.price} грн`;
         
     }else if (event.target.classList.contains('product_item_title')) {
         popupButton.onclick =  () => newName(productName);
@@ -50,6 +51,7 @@ function newPrice(productName) {
 const popupBody = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup_close');
 const body = document.querySelector('body');
+
 function togglePopup() { 
     popupBody.classList.toggle('open');
 

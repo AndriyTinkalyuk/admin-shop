@@ -19,6 +19,6 @@ export default function renderCards() {
             </div>`
         );
     }
-    sumOfPrices()
+    sumOfPrices(productList);
 
 }
